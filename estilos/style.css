@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Mochiy+Pop+P+One&family=Pacifico&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+.border{
+    border: 1px solid black;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    
+}
+h1{
+    
+    text-align: center;
+        color: rgb(34, 10, 247);
+
+}
+h2{
+    
+    text-align: center;
+        color:gold;
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'Lobster', cursive;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        font-family: 'Pacifico', cursive;
+}
+div img{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+}
+.mas{
+    transform: translateX(60vh);
+}
+
+#cuerpo{
+    display: grid;
+    grid-template-areas: 
+    "header header header" 
+    "menu peliculas peliculas"
+    "menu estrenos estrenos" 
+    "menu footer footer"   
+    ;
+    grid-template-columns: 20% auto 10%;
+    grid-template-rows: 100px 2fr  2fr 50px;
+}   
+
+
+header{
+    
+    grid-area: header;
+    background-color: #abe9cd;
+background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+}
+footer{
+    grid-area: footer;
+}
+section#peliculas{
+    grid-area: peliculas;
+    background-image: url(../imagenes/peliculasyseries.jpg);
+    
+}
+section#estrenos{
+    grid-area: estrenos;
+    background-image: url(../imagenes/peliculasyseries.jpg);
+}
+
+nav{
+    grid-area: menu;
+    background-color: #abe9cd;
+background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+}
+footer{
+    background-color: #abe9cd;
+background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    
+}
+a{
+    text-decoration: none;
+}
+footer img{
+
+width: 20px;
+
+
+}
