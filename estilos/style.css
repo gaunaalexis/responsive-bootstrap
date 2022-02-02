@@ -2,6 +2,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 .border{
     border: 1px solid black;
@@ -32,10 +33,9 @@ div img{
 a{
     text-decoration: none;
 }
-.mas{
-    transform: translateX(60vh);
-}
 
+/*desktop*/
+@media (min-width:1024px){
 #cuerpo{
     display: grid;
     grid-template-areas: 
@@ -47,7 +47,9 @@ a{
     grid-template-columns: 20% auto 10%;
     grid-template-rows: 100px 2fr  2fr 50px;
 }   
-
+.mas{
+    transform: translateX(60vh);
+}
 
 header{
     
@@ -85,5 +87,133 @@ footer img{
 
 width: 20px;
 
+
+}
+}
+/*tablet*/
+@media(min-width:481px) and (max-width:1023px){
+
+    #cuerpo{
+        display: grid;
+        grid-template-areas: 
+        "header header " 
+        "peliculas peliculas " 
+        "estrenos estrenos"
+        "footer footer"   
+        ;
+        grid-template-columns: 15% auto;
+        grid-template-rows: 100px 2fr  2fr 2fr;
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    } 
+    .mas{
+        transform: translateX(50vh);
+    }
+    header{
+    
+        grid-area: header;
+        background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    }
+    footer{
+        grid-area: footer;
+        
+    }
+    section#peliculas{
+        grid-area: peliculas;
+        background-image: url(../imagenes/peliculasyseries.jpg);
+        padding: 10px;
+        
+    }
+    section#estrenos{
+        grid-area: estrenos;
+        background-image: url(../imagenes/peliculasyseries.jpg);
+    
+    }
+    nav{
+        display: none;
+    }
+    
+    footer{
+        background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    footer img{
+    
+    width: 20px;
+    
+    
+    }
+
+    .atras{
+        background-color: #f5d020;
+background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+    }
+    
+}
+/*smartphone*/
+@media (max-width:480px){
+
+    #cuerpo{
+        display: grid;
+        grid-template-areas: 
+        "header" 
+        "peliculas " 
+        "estrenos "
+        "footer"   
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 2fr  2fr 2fr ;
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    }   
+
+    header{
+    
+        grid-area: header;
+        background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    }
+    footer{
+        grid-area: footer;
+    }
+    section#peliculas{
+        grid-area: peliculas;
+        background-image: url(../imagenes/peliculasyseries.jpg);
+        
+    }
+    section#estrenos{
+        grid-area: estrenos;
+        background-image: url(../imagenes/peliculasyseries.jpg);
+    }
+    
+    nav{
+        display: none;
+    }
+    footer{
+        background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    footer img{
+    
+    width: 20px;
+    
+    
+    }
+    .atras{
+        background-color: #f5d020;
+background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+    }
+    .mas{
+        transform: translateX(20vh);
+    }
 
 }
